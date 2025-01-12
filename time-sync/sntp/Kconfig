@@ -1,0 +1,21 @@
+menu "SNTP Time Sync Configuration"
+
+config SNTP_TIMEZONE
+    string "Timezone"
+    default "UTC0"
+    help
+        Set the default timezone (e.g., "EST5EDT").
+
+config SNTP_NTP_SERVER
+    string "NTP Server"
+    default "pool.ntp.org"
+    help
+        Set the NTP server to use for time synchronization.
+
+config SNTP_RETRY_COUNT
+    int "Retry Count"
+    default 10
+    help
+        Set the number of retries for time synchronization.
+
+endmenu
